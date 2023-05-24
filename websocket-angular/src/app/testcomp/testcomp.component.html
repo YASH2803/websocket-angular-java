@@ -1,0 +1,12 @@
+<form [formGroup]="formValidation" (ngSubmit)="onSubmit()">
+    <div class="form_group" >
+        <mat-form-field>
+            <mat-label>Choose a date</mat-label>
+            <input  matInput [matDatepicker]="picker" formControlName="upToDate">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+          <!-- <input type="date" formControlName="upToDate"> -->
+    </div>
+    <button type="submit">Submit</button>
+</form>
